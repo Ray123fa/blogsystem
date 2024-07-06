@@ -1,7 +1,7 @@
 @props(['active' => ''])
 
 <div
-  class="navbar bg-base-300 bg-opacity-50 backdrop-blur-md mx-auto px-2 sm:px-4 shadow-sm dark:shadow-slate-50 top-0 right-0 left-0 fixed">
+  class="navbar bg-base-300 bg-opacity-50 backdrop-blur-md mx-auto px-2 sm:px-4 shadow-sm dark:shadow-slate-50 top-0 right-0 left-0 fixed z-[99]">
   {{-- Mobile --}}
   <div class="navbar-start">
     <div class="dropdown">

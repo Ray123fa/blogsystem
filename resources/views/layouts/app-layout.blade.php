@@ -1,4 +1,4 @@
-@props(['title' => '', 'active' => ''])
+@props(['title' => ''])
 
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
