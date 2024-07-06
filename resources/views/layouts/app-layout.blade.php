@@ -1,7 +1,7 @@
-@props(['title' => ''])
+@props(['title' => '', 'active' => ''])
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -13,8 +13,8 @@
 </head>
 
 <body class="antialiased">
-  <x-header />
-  <div class="wrapper px-6 sm:px-8">
+  <x-header active="{{ $title }}" />
+  <div class="wrapper px-6 sm:px-8 mt-20">
     <h1 class="text-xl font-bold">{{ $title }}</h1>
 
     {{ $slot }}
