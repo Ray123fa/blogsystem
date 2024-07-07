@@ -1,7 +1,5 @@
-@props(['active' => ''])
-
 <div
-  class="navbar bg-base-300 bg-opacity-50 backdrop-blur-md mx-auto px-2 sm:px-4 shadow-sm dark:shadow-slate-50 top-0 right-0 left-0 fixed z-[99]">
+  class="navbar bg-base-300 bg-opacity-50 backdrop-blur-md mx-auto px-2 sm:px-4 shadow-sm shadow-base-300 dark:shadow-slate-50 top-0 right-0 left-0 fixed z-[99]">
   {{-- Mobile --}}
   <div class="navbar-start">
     <div class="dropdown">
@@ -11,10 +9,10 @@
         </svg>
       </div>
       <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-[1] mt-5 w-52 p-2 shadow">
-        <li><a class="{{ $active == 'Home' ? 'active' : '' }}" href="/">Home</a></li>
-        <li><a class="{{ $active == 'About' ? 'active' : '' }}" href="/about">About</a></li>
-        <li><a class="{{ $active == 'Blog' ? 'active' : '' }}" href="/blog">Blog</a></li>
-        <li><a class="{{ $active == 'Contact' ? 'active' : '' }}" href="/contact">Contact</a></li>
+        <li><x-nav-link :active="request()->is('/')" href="/">Home</x-nav-link></li>
+        <li><x-nav-link :active="request()->is('about')" href="about">About</x-nav-link></li>
+        <li><x-nav-link :active="request()->is('blog')" href="blog">Blog</x-nav-link></li>
+        <li><x-nav-link :active="request()->is('contact')" href="contact">Contact</x-nav-link></li>
       </ul>
     </div>
     <a class="btn btn-ghost text-xl">myBlog</a>
@@ -23,10 +21,10 @@
   {{-- Desktop --}}
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
-      <li><a class="{{ $active == 'Home' ? 'active' : '' }}" href="/">Home</a></li>
-      <li><a class="{{ $active == 'About' ? 'active' : '' }}" href="/about">About</a></li>
-      <li><a class="{{ $active == 'Blog' ? 'active' : '' }}" href="/blog">Blog</a></li>
-      <li><a class="{{ $active == 'Contact' ? 'active' : '' }}" href="/contact">Contact</a></li>
+      <li><x-nav-link :active="request()->is('/')" href="/">Home</x-nav-link></li>
+      <li><x-nav-link :active="request()->is('about')" href="about">About</x-nav-link></li>
+      <li><x-nav-link :active="request()->is('blog')" href="blog">Blog</x-nav-link></li>
+      <li><x-nav-link :active="request()->is('contact')" href="contact">Contact</x-nav-link></li>
     </ul>
   </div>
   {{-- End Desktop --}}
