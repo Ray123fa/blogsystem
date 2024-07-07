@@ -1,4 +1,4 @@
-@props(['title', 'image', 'desc', 'cta'])
+@props(['id', 'title', 'image', 'desc'])
 
 <div class="flex justify-center">
   <div class="card card-compact bg-base-100 w-full shadow-md shadow-slate-200 dark:shadow-gray-500">
@@ -9,7 +9,7 @@
       <h2 class="card-title">{{ $title }}</h2>
       <p>{{ $desc }}</p>
       <div class="card-actions justify-end">
-        <button class="btn btn-sm btn-primary">{{ $cta }}</button>
+        <a class="btn btn-sm btn-primary" href="blog/{{ $id }}">View Article</a>
       </div>
     </div>
   </div>

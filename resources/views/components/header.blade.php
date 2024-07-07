@@ -10,9 +10,9 @@
       </div>
       <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-200 rounded-box z-[1] mt-5 w-52 p-2 shadow">
         <li><x-nav-link :active="request()->is('/')" href="/">Home</x-nav-link></li>
-        <li><x-nav-link :active="request()->is('about')" href="about">About</x-nav-link></li>
-        <li><x-nav-link :active="request()->is('blog')" href="blog">Blog</x-nav-link></li>
-        <li><x-nav-link :active="request()->is('contact')" href="contact">Contact</x-nav-link></li>
+        <li><x-nav-link :active="request()->is('about')" href="/about">About</x-nav-link></li>
+        <li><x-nav-link :active="request()->is('blog')" href="/blog">Blog</x-nav-link></li>
+        <li><x-nav-link :active="request()->is('contact')" href="/contact">Contact</x-nav-link></li>
       </ul>
     </div>
     <a class="btn btn-ghost text-xl">myBlog</a>
@@ -22,9 +22,9 @@
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1">
       <li><x-nav-link :active="request()->is('/')" href="/">Home</x-nav-link></li>
-      <li><x-nav-link :active="request()->is('about')" href="about">About</x-nav-link></li>
-      <li><x-nav-link :active="request()->is('blog')" href="blog">Blog</x-nav-link></li>
-      <li><x-nav-link :active="request()->is('contact')" href="contact">Contact</x-nav-link></li>
+      <li><x-nav-link :active="request()->is('about')" href="/about">About</x-nav-link></li>
+      <li><x-nav-link :active="request()->is('blog')" href="/blog">Blog</x-nav-link></li>
+      <li><x-nav-link :active="request()->is('contact')" href="/contact">Contact</x-nav-link></li>
     </ul>
   </div>
   {{-- End Desktop --}}
