@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ $title }} - {{ env('APP_NAME') }}</title>
   <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}" type="image/x-icon">
-  @vite('resources/css/app.css', 'resources/js/app.js')
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="antialiased">
