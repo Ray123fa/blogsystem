@@ -9,7 +9,7 @@
       <h2 class="card-title">{{ $title }}</h2>
       <p>{{ $desc }}</p>
       <div class="card-actions justify-end">
-        <a class="btn btn-sm btn-primary" href="blog/{{ $id }}">View Article</a>
+        <a class="btn btn-sm btn-primary" href="{{ route('post', ['id' => $id]) }}">View Article</a>
       </div>
     </div>
   </div>
