@@ -12,11 +12,15 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/blog', function () {
-    return view('blog', ['posts' => Post::allPost()]);
+    return view('blog', ['posts' => Post::all()]);
 })->name('blog');
 
 Route::get('/blog/{id}', function ($id) {
-    return view('post', ['post' => Post::findPost($id)]);
+    if (!Post::find($id)) {
+        abort(404);
+    }
+
+    return view('post', ['post' => Post::find($id)]);
 })->name('post');
 
 Route::get('/contact', function () {
